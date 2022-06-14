@@ -7,16 +7,18 @@ public abstract class Item {
     private String genero;
     private double valor;
     private Avaliacao[] avaliacoes = new Avaliacao[30];
+    public abstract void mostrarItem();
 
     public void avaliar() {
         Scanner in = new Scanner(System.in);
         Avaliacao a = new Avaliacao();
-        System.out.print("Informe o nome do avaliador: ");
+        System.out.print("Nome avaliador: ");
         a.setNome(in.nextLine());
-        System.out.println("Informe uma nota de 0 a 10: ");
+        System.out.println("Nota (0 até 10): ");
+
         a.setRating(in.nextDouble());
         in.nextLine();
-        System.out.print("Informe algum feedback (opcional): ");
+        System.out.print("Deixe um comentário (opcional): ");
         a.setFeedback(in.nextLine());
         for (int i = 0; i < getAvaliacoes().length; i++) {
             if (getAvaliacoes()[i] == null) {
