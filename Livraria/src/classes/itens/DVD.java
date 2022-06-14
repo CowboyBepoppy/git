@@ -30,4 +30,9 @@ public class DVD extends Item{
     public void setAnoLancamento(int anoLancamento) {
         this.anoLancamento = anoLancamento;
     }
+
+    @Override
+    public void mostrarItem() {
+
+    }
 }
